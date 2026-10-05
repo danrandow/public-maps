@@ -1,0 +1,115 @@
+map:
+  schema: "v0.2"
+  id: "product-capability"
+  title: "Product Capability"
+  scenario: "Moving Parts"
+  is_moo: true
+  dimension_axes: [time_horizon]
+  rating:
+    stars: 5
+    notes: Can be used as a template for many business models. A superset of 
+      "Product Development Process". Not as complete as "Capability, Product, 
+      Distribution".
+
+actors:
+- id: actor0
+  label: Team
+- id: actor1
+  label: Team
+- id: actor2
+  label: Customer
+
+actions:
+- id: action0
+  label: Builds
+  actor: actor0
+- id: action1
+  label: Builds
+  actor: actor1
+- id: action2
+  label: Acts
+  actor: actor2
+
+entities:
+- id: entity0
+  label: Capability
+- id: entity1
+  label: Product
+- id: entity2
+  label: Benefit
+- id: entityR0
+  label: Feedback
+  direction: return
+  notes: "Assumed — feedback helps improve future capability iterations."
+- id: entityR1
+  label: Feedback
+  direction: return
+- id: entityR2
+  label: Feedback
+  direction: return
+- id: entityPrv0
+  label: Team Benefit
+  system_boundary: private
+- id: entityPub1
+  label: Competitors
+  system_boundary: public
+
+edges:
+- id: edge0G
+  from: action0
+  to: entity0
+  type: generates
+- id: edge0U
+  from: entity0
+  to: action1
+  type: used by
+- id: edge1G
+  from: action1
+  to: entity1
+  type: generates
+- id: edge1U
+  from: entity1
+  to: action2
+  type: used by
+- id: edge2G
+  from: action2
+  to: entity2
+  type: generates
+- id: edge2RG
+  from: action2
+  to: entityR0
+  type: generates
+  direction: return
+- id: edge2RU
+  from: entityR0
+  to: action0
+  type: used by
+  direction: return
+- id: edge1RG
+  from: action2
+  to: entityR1
+  type: generates
+  direction: return
+- id: edge1RU
+  from: entityR1
+  to: action1
+  type: used by
+  direction: return
+- id: edge0RG
+  from: action1
+  to: entityR2
+  type: generates
+  direction: return
+- id: edge0RU
+  from: entityR2
+  to: action0
+  type: used by
+  direction: return
+- id: edgePrv0G
+  from: action1
+  to: entityPrv0
+  type: generates
+- id: edgePub1U
+  from: entityPub1
+  to: action2
+  type: used by
