@@ -1,0 +1,71 @@
+map:
+  id: boardcraft
+  schema: v0.2
+  title: Boardcraft
+  scenario: Management shapes the pilot commitment
+  inherits: base.yaml
+  notes: Hypothetical comparison at the same first review. The operating team identified the delivery
+    risk and management revised its network-wide proposal to a capped one-site trial before directors
+    met. Directors arrived unprepared and approved the revised proposal without probing it or setting
+    review criteria. This illustrates a lapse in active engagement. The network kept filling orders,
+    pilot costs fell under normal demand, peak performance remains open and shareholders ask the same
+    questions about distributions. The dated proposal and commitment records would show whether formal
+    board approval changed management’s operating choice.
+dimensions:
+  time_horizon: first investment review
+  decision_origin: management revises plan before approval
+overrides:
+  entities:
+  - id: entity0
+    label: One-site plan approved
+    notes: The board formally authorises the one-site trial and budget proposed by management. Management
+      has already selected that scope. A separate board decision is needed for wider rollout. Management
+      sets its own operating measures.
+  - id: entity1
+    label: Network fills orders
+    notes: Orders continue to ship across the network while the new process is trialled at one site.
+      The company keeps serving customers throughout the trial.
+  - id: entityR1
+    label: Peak test requested
+    notes: At first review, pilot records show lower cost per order and delivery reliability in line
+      with the baseline in normal demand. Peak demand has yet to be tested. Management asks the board
+      to defer rollout and authorise a peak-demand test within the pilot scope.
+  - id: entity2
+    label: Returns still open
+    notes: The review establishes no shareholder return attributable to the pilot. Any effect on distributions
+      or the value of the stake depends on further commitments and subsequent operating results.
+  - id: entityR2
+    label: Distribution questions
+    notes: Shareholders ask how much cash a wider rollout would tie up, when it could pay back and
+      what evidence would justify putting cash otherwise available for distributions at risk.
+  edges:
+  - id: edge0U
+    confidence: assumed
+    notes: Compare the dated proposals with the minutes and actual commitments. Check whether management
+      selected and documented the one-site limit before the meeting and whether formal approval changed
+      any operating choice. The hypothesis is that it permitted the trial as proposed.
+  - id: edge1G
+    confidence: assumed
+    notes: Check fulfilment records across the network. Compare pilot cost and reliability against
+      the pre-pilot baseline and comparable sites, accounting for order mix, staffing and demand.
+      Peak performance remains open.
+  - id: edge1R1U
+    confidence: assumed
+    notes: Management supplies the same results and peak-test request using its own measures. Check
+      whether the board engages with the evidence at review. Any contribution from the review decision
+      would require a separate trace.
+  - id: edge2R2U
+    confidence: assumed
+    notes: Check shareholder questions and board minutes for whether concerns about capital and distributions
+      shaped the board’s review of funding, timing or the evidence required.
+  actions:
+  - id: action0
+    label: Approve revised plan
+    notes: Directors arrive without having examined the proposal. They approve the revised one-site
+      trial and its budget without probing delivery risk or defining review criteria. The board retains
+      authority over wider rollout.
+  - id: action1
+    label: Run network & trial
+    notes: Before board approval, management chooses to stage the rollout after its operating team
+      identifies a delivery risk. It proposes and then runs the same capped one-site trial, keeps
+      other sites on the existing process and tracks delivery and cost on its own initiative.

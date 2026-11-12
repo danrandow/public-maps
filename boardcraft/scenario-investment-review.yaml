@@ -1,0 +1,71 @@
+map:
+  id: boardcraft
+  schema: v0.2
+  title: Boardcraft
+  scenario: Board shapes the pilot commitment
+  inherits: base.yaml
+  notes: Hypothetical example. Management proposed rolling out a new fulfilment process across the
+    network. The board weighed expected savings against the risk to reliable delivery and authorised
+    a capped trial at one site. At the first review, deliveries have continued and costs are down
+    at the pilot site, but peak demand is still untested. Management asks the board to defer rollout
+    pending a peak-demand test. Shareholders ask how expansion would affect cash available for distributions.
+    The board’s plausible contribution is limiting the initial capital commitment while management
+    learns. Lower pilot costs alone leave the board’s contribution to company performance open.
+dimensions:
+  time_horizon: first investment review
+  decision_origin: board changes management plan
+overrides:
+  entities:
+  - id: entity0
+    label: Pilot only authorised
+    notes: Management can run a one-site trial within the agreed pilot budget and choose how to run
+      it. At the first review it must report delivery reliability, cost per order and any exceptions.
+      Wider rollout requires a separate board decision and evidence of lower unit costs with delivery
+      reliability maintained through peak demand.
+  - id: entity1
+    label: Network fills orders
+    notes: Orders continue to ship across the network while the new process is trialled at one site.
+      The company keeps serving customers throughout the trial.
+  - id: entityR1
+    label: Peak test requested
+    notes: At first review, pilot records show lower cost per order and delivery reliability in line
+      with the baseline in normal demand. Peak demand has yet to be tested. Management asks the board
+      to defer rollout and authorise a peak-demand test within the pilot scope.
+  - id: entity2
+    label: Returns still open
+    notes: The review establishes no shareholder return attributable to the pilot. Any effect on distributions
+      or the value of the stake depends on further commitments and subsequent operating results.
+  - id: entityR2
+    label: Distribution questions
+    notes: Shareholders ask how much cash a wider rollout would tie up, when it could pay back and
+      what evidence would justify putting cash otherwise available for distributions at risk.
+  edges:
+  - id: edge0U
+    confidence: assumed
+    notes: Compare the network-wide proposal, board minutes and actual purchase or staffing commitments.
+      Check whether the board condition explains the one-site limit or whether management would already
+      have staged the rollout.
+  - id: edge1G
+    confidence: assumed
+    notes: Check fulfilment records across the network. Compare pilot cost and reliability against
+      the pre-pilot baseline and comparable sites, accounting for order mix, staffing and demand.
+      Peak performance remains open.
+  - id: edge1R1U
+    confidence: assumed
+    notes: Check the review pack and minutes for whether the board used the evidence and the executive
+      request to decide whether to authorise the peak test or revisit the rollout commitment.
+  - id: edge2R2U
+    confidence: assumed
+    notes: Check shareholder questions and board minutes for whether concerns about capital and distributions
+      shaped the board’s review of funding, timing or the evidence required.
+  actions:
+  - id: action0
+    label: Authorise & review pilot
+    notes: Directors challenge the assumptions behind the proposed savings, weigh them against reliable
+      customer delivery and agree on a limited commitment. They delegate the trial design to management
+      and reserve the rollout decision for the board. At review they ask whether the evidence meets
+      the agreed service and cost criteria.
+  - id: action1
+    label: Run network & trial
+    notes: Management keeps the existing process at other sites, commits resources at one site only
+      and monitors delivery and cost against the pre-pilot baseline.

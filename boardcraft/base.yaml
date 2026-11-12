@@ -1,0 +1,165 @@
+map:
+  id: boardcraft
+  schema: v0.2
+  title: Boardcraft
+  scenario: Moving Parts
+  is_moo: true
+  dimension_axes:
+  - time_horizon
+  - decision_origin
+  notes: The board produces a mandate that executives use to operate the company. Shareholders use
+    their stake in the functioning company to seek returns. The board uses execution evidence and
+    shareholder feedback to oversee performance, revisit commitments and account for stewardship.
+    Crow's Strategic Governance Framework supplies the director capabilities, activities and behaviours.
+    The actionable mandate and explicit feedback paths are the Randow Maps interpretation.
+actors:
+- id: actor0
+  label: Board of Directors
+  notes: Directors acting collectively in the interests of the company.
+- id: actor1
+  label: CEO & Executives
+  notes: Help formulate or refine strategy with the board. The CEO is responsible for execution.
+- id: actor2
+  label: Shareholders
+  notes: Investors seek distributions and growth in the value of their stake. Where they have voting
+    rights, they can also influence stewardship.
+actions:
+- id: action0
+  label: Set direction & oversee
+  notes: 'The board sets direction, ensures adequate capability and oversees performance. The five
+    behaviours shape how it does that work (Crow, pp. 6–7).
+
+
+    - Strategic competence: exercise long-term judgment with incomplete information.
+
+    - Active engagement: prepare, participate and follow through on implementation.
+
+    - Sense of purpose: use the agreed long-term purpose to guide choices and judge performance.
+
+    - Collective efficacy: bring different perspectives into vigorous debate and reach an informed
+    decision together.
+
+    - Constructive control: guide, support and challenge management in line with strategy and goals.
+
+
+    The board also verifies performance and provides an account of performance and stewardship to
+    shareholders (Crow, p. 6).'
+  actor: actor0
+- id: action1
+  label: Run the company
+  notes: 'Use the mandate to make operating choices and keep the business functioning: organise people
+    and resources, deliver its work and sustain operations. Track how well it operates against agreed
+    goals and bring evidence, exceptions and decision requests to the board.'
+  actor: actor1
+- id: action2
+  label: Manage their stake
+  notes: Hold or sell the stake, receive distributions when made, and exercise voting rights where
+    held. Consider the company's ability to continue operating and its prospects.
+  actor: actor2
+entities:
+- id: entity0
+  label: Actionable mandate
+  notes: Agreed strategic direction, major commitments, authority and resources to act, and the results
+    and limits for which management is accountable. The mandate sets the results, exceptions and evidence
+    management is expected to report to the board.
+  system_boundary: internal
+- id: entity1
+  label: Functioning company
+  notes: A business able to carry on operating. Its performance can vary. Shareholders participate
+    in its economics through their ownership stake, with no guarantee of positive returns.
+  system_boundary: internal
+- id: entityR1
+  label: Execution evidence
+  notes: Actual results against goals, what the mandate enabled or constrained, which assumptions
+    failed and which decisions executives need. The board uses this evidence to verify performance,
+    guide management, revisit commitments and substantiate its account.
+- id: entityPrv0
+  label: Director capabilities
+  notes: Sector knowledge, technical expertise, business acumen, maturity and wisdom that directors
+    draw on to interpret evidence and exercise judgment (Crow, p. 6).
+  system_boundary: private
+- id: entityPrv0A
+  label: Long-term purpose
+  notes: The company's agreed purpose supplies the decision criterion and the reference point for
+    assessing performance (Crow, pp. 4 and 6).
+  system_boundary: private
+- id: entityPub0
+  label: Operating context
+  notes: Markets, disruption and applicable operating requirements shape how executives allocate resources,
+    manage risks and adapt day-to-day operations. Executives bring material changes and implications
+    to the board through execution evidence.
+  system_boundary: public
+- id: entity2
+  label: Investment outcomes
+  system_boundary: internal
+  notes: Distributions received and changes in the value of the stake, including gains or losses realised
+    on sale. Voting rights, where held, give shareholders a way to influence stewardship.
+- id: entityR2
+  label: Shareholder feedback
+  notes: Questions and views on returns, acceptable risks, time horizons and the adequacy of the board's
+    evidence. Where voting rights exist, votes can signal support or concern. The board weighs these
+    signals in its deliberations.
+- id: entityPrv2
+  label: Ownership stake
+  notes: The shareholder's privately held ownership asset. It carries an economic interest and may
+    carry voting rights. Shareholders draw on these rights when managing the holding.
+  system_boundary: private
+edges:
+- id: edge0G
+  type: generates
+  from: action0
+  to: entity0
+- id: edge0U
+  type: used by
+  from: entity0
+  to: action1
+- id: edge1G
+  type: generates
+  from: action1
+  to: entity1
+- id: edge1R1G
+  type: generates
+  from: action1
+  to: entityR1
+  direction: return
+- id: edge1R1U
+  type: used by
+  from: entityR1
+  to: action0
+  direction: return
+- id: edgePrv0U
+  type: used by
+  from: entityPrv0
+  to: action0
+- id: edgePrv0AU
+  type: used by
+  from: entityPrv0A
+  to: action0
+- id: edgePub0U
+  type: used by
+  from: entityPub0
+  to: action1
+- id: edge1U
+  type: used by
+  from: entity1
+  to: action2
+  notes: Shareholders participate through their stake. Continuing operations sustain the opportunity
+    for distributions and future value, with outcomes depending on performance and other factors.
+- id: edge2G
+  type: generates
+  from: action2
+  to: entity2
+- id: edge2R2G
+  type: generates
+  from: action2
+  to: entityR2
+  direction: return
+- id: edge2R2U
+  type: used by
+  from: entityR2
+  to: action0
+  direction: return
+- id: edgePrv2U
+  type: used by
+  from: entityPrv2
+  to: action2

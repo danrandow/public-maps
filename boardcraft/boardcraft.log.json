@@ -1,0 +1,161 @@
+{
+  "map_id": "boardcraft",
+  "created_at": "2026-11-12T00:19:41Z",
+  "iterations": [
+    {
+      "id": "1a4d7bf79ea7428c8b206e7e3ac2ad6f",
+      "type": "chat-author",
+      "timestamp": "2026-11-12T00:19:41Z",
+      "yaml_file": "base.yaml",
+      "score": null,
+      "feedback": "Map the distinctive approach described in Boardcraft and the handover.",
+      "model": "chat-mode",
+      "reauthored": false,
+      "status": "applied",
+      "files_written": [
+        "base.yaml"
+      ]
+    },
+    {
+      "id": "c36b2767cae445a9aeb499b251cf282c",
+      "type": "chat-author",
+      "timestamp": "2026-11-12T00:19:41Z",
+      "yaml_file": "scenario-investment-review.yaml",
+      "score": null,
+      "feedback": "Map the distinctive approach described in Boardcraft and the handover.",
+      "model": "chat-mode",
+      "reauthored": false,
+      "status": "applied",
+      "files_written": [
+        "scenario-investment-review.yaml"
+      ]
+    },
+    {
+      "id": "0276565bfd5a471ea36f20a8c372b014",
+      "type": "chat-author",
+      "timestamp": "2026-11-12T00:20:07Z",
+      "yaml_file": "base.yaml",
+      "score": null,
+      "feedback": null,
+      "model": "chat-mode",
+      "reauthored": true,
+      "status": "applied",
+      "files_written": [
+        "base.yaml"
+      ]
+    },
+    {
+      "id": "b3972139fbc7485daca92a37e0f1d691",
+      "type": "chat-author",
+      "timestamp": "2026-11-12T00:33:08Z",
+      "yaml_file": "base.yaml",
+      "score": null,
+      "feedback": "Merge the board and shareholder drafts into Boardcraft. Model a functioning company and the shareholder's private stake. Supersedes boardcraft-stewardship/base.yaml and scenario-investment-review.yaml.",
+      "model": "chat-mode",
+      "reauthored": true,
+      "status": "applied",
+      "files_written": [
+        "base.yaml"
+      ]
+    },
+    {
+      "id": "73d2b28ac30644e8826c50a6815922a8",
+      "type": "chat-author",
+      "timestamp": "2026-11-12T00:33:09Z",
+      "yaml_file": "scenario-investment-review.yaml",
+      "score": null,
+      "feedback": "Merge the board and shareholder drafts into Boardcraft. Model a functioning company and the shareholder's private stake. Supersedes boardcraft-stewardship/base.yaml and scenario-investment-review.yaml.",
+      "model": "chat-mode",
+      "reauthored": true,
+      "status": "applied",
+      "files_written": [
+        "scenario-investment-review.yaml"
+      ]
+    },
+    {
+      "id": "cb1051ec206e4522a474811e47988139",
+      "type": "chat-author",
+      "timestamp": "2026-11-12T00:39:09Z",
+      "yaml_file": "base.yaml",
+      "score": null,
+      "feedback": "Remove standalone stewardship account and move operating context to executives. Capture management reporting expectations in the mandate and board reporting in its action notes.",
+      "model": "chat-mode",
+      "reauthored": true,
+      "status": "applied",
+      "files_written": [
+        "base.yaml"
+      ]
+    },
+    {
+      "id": "dcf4754a0be943b89fc446217796e740",
+      "type": "chat-author",
+      "timestamp": "2026-11-12T00:39:10Z",
+      "yaml_file": "scenario-investment-review.yaml",
+      "score": null,
+      "feedback": "Remove standalone stewardship account and move operating context to executives. Capture management reporting expectations in the mandate and board reporting in its action notes.",
+      "model": "chat-mode",
+      "reauthored": true,
+      "status": "applied",
+      "files_written": [
+        "scenario-investment-review.yaml"
+      ]
+    },
+    {
+      "id": "2c347ea36879491f86e6b550c33109f1",
+      "type": "chat-author",
+      "timestamp": "2026-11-12T00:42:51Z",
+      "yaml_file": "scenario-investment-review.yaml",
+      "score": null,
+      "feedback": "Make the hypothetical first review concrete with a prior rollout proposal, a bounded mandate, a functioning fulfilment network, an executive decision request and shareholder questions about distributions.",
+      "model": "chat-mode",
+      "reauthored": true,
+      "status": "applied",
+      "files_written": [
+        "scenario-investment-review.yaml"
+      ]
+    },
+    {
+      "id": "a71fda526fef45779785f1f21b1571d3",
+      "type": "chat-author",
+      "timestamp": "2026-11-12T00:48:37Z",
+      "yaml_file": "base.yaml",
+      "score": null,
+      "feedback": "Compare board-shaped and management-shaped commitments at the same first review. Hold operating results, the executive request and shareholder feedback constant.",
+      "model": "chat-mode",
+      "reauthored": true,
+      "status": "applied",
+      "files_written": [
+        "base.yaml"
+      ]
+    },
+    {
+      "id": "e75fc72984924687a12622c661b943c2",
+      "type": "chat-author",
+      "timestamp": "2026-11-12T00:48:38Z",
+      "yaml_file": "scenario-investment-review.yaml",
+      "score": null,
+      "feedback": "Compare board-shaped and management-shaped commitments at the same first review. Hold operating results, the executive request and shareholder feedback constant.",
+      "model": "chat-mode",
+      "reauthored": true,
+      "status": "applied",
+      "files_written": [
+        "scenario-investment-review.yaml"
+      ]
+    },
+    {
+      "id": "845acc33842042c7ae4cf51811b0d59c",
+      "type": "chat-author",
+      "timestamp": "2026-11-12T00:48:39Z",
+      "yaml_file": "scenario-management-led-pilot.yaml",
+      "score": null,
+      "feedback": "Compare board-shaped and management-shaped commitments at the same first review. Hold operating results, the executive request and shareholder feedback constant.",
+      "model": "chat-mode",
+      "reauthored": true,
+      "status": "applied",
+      "files_written": [
+        "scenario-management-led-pilot.yaml"
+      ]
+    }
+  ],
+  "last_updated": "2026-11-12T00:48:39Z"
+}
